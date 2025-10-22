@@ -1,0 +1,66 @@
+# C/C++ Project Rules for Hello World Project
+
+## Code Style
+- Follow Google C/C++ Style Guide
+- Use snake_case for variables and functions
+- Use UPPER_CASE for constants and macros
+- Always include header guards in .h files
+- Document all functions with Doxygen-style comments
+- Use 2 spaces for indentation (not tabs)
+- Maximum line length: 80 characters
+
+## Project Structure
+- Source files go in src/
+- Header files go in include/
+- Build artifacts go in build/
+- Use Makefile for building
+- Keep build directory in .gitignore
+
+## Best Practices
+- Always check return values
+- Use const where appropriate
+- Initialize variables before use
+- Handle errors gracefully
+- Use meaningful variable names
+- Include forward declarations for static functions
+- Use static for functions that are only used within the same file
+
+## Documentation Standards
+- Use /** */ for function documentation
+- Include @brief, @param, @return tags
+- Document complex algorithms and data structures
+- Add inline comments for non-obvious code
+- Include file headers with @file, @brief, @author, @date
+
+## Error Handling
+- Use error_code_t enum for consistent error reporting
+- Always check malloc/calloc return values
+- Use DEBUG_PRINT macro for debug output
+- Return appropriate error codes from functions
+- Print error messages to stderr, not stdout
+
+## Memory Management
+- Always free allocated memory
+- Use UNUSED_PARAM macro for unused parameters
+- Avoid memory leaks
+- Use appropriate data types for sizes (size_t, not int)
+
+## Compiler Warnings
+- Enable all warnings (-Wall -Wextra)
+- Use -pedantic for strict C99 compliance
+- Fix all warnings before committing
+- Use -Werror in CI/CD if possible
+
+## Testing
+- Test all code paths
+- Include edge cases
+- Verify error handling
+- Test with different input values
+- Use debug mode for development
+
+## Security
+- Validate all user input
+- Use bounds checking for arrays
+- Avoid buffer overflows
+- Use safe string functions when available
+- Be careful with format strings in printf
